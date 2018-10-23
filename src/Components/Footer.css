@@ -1,0 +1,95 @@
+.gridFooter{
+	display: inline-grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr; 
+	grid-template-areas: 'none author Icons';
+}
+.author{
+	grid-area: author;
+}
+
+footer>div>div{
+	font-size: 23px;
+	background-color: gray;
+	text-align: center;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer>div>img{
+	position: fixed;
+	bottom: 63px;
+	left: 20px;
+	animation-name: donut-animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+.attribution{
+	font-size: 100%;
+	text-align: right;
+	color: #525252;
+	grid-area: Icons;
+}
+
+@keyframes donut-animation{
+	0% {
+		bottom: 0px; 
+	}
+	5%{
+		bottom: 0px;
+		animation-timing-function: ease-out;
+	}
+	18% {
+		bottom: 160px; 
+		animation-timing-function: ease-in;
+	}
+	31% {
+		bottom: 63px; 
+		animation-timing-function: ease-out;
+		transform: scale(1, 1);
+	}
+	33% {
+		transform: scale(1.2, 0.9);
+	}
+	45% {
+		bottom: 120px; 
+		animation-timing-function: ease-in;
+		transform: scale(1, 1);
+	}
+	60% {
+		bottom: 63px; 
+		animation-timing-function: ease-out;
+		transform: scale(1, 1);
+	}
+	64%{
+		transform: scale(1.2, 0.9);
+	}
+	75% {
+		bottom: 100px; 
+		animation-timing-function: ease-in;
+		transform: scale(1, 1);
+	}
+	85%{
+		bottom: 63px;
+	}
+	95%{
+		bottom: 0px;
+	}
+	100% {
+		bottom: -10px; 
+		animation-timing-function: ease-out;
+	}
+}
+
+@media only screen and (max-width: 1024px){
+	footer>div>img{
+		display: none;
+	}
+	footer>div>div, footer>div>img{
+		position: initial;
+	}
+	.attribution{
+		font-size: 50%;
+	}
+}

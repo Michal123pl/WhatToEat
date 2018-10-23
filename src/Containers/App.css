@@ -1,0 +1,17 @@
+input{
+	outline: none;
+}
+main{
+	width: 80vw;
+	margin: auto;
+	text-align: center;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+}
+@media only screen and (max-width: 1024px){
+	footer{
+		align-items: flex-end;
+	}
+}

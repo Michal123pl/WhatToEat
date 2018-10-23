@@ -1,0 +1,16 @@
+.Navigation{
+	padding-bottom: 80px;
+}
+
+.Navigation>input{
+	font-size: 200%;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: orange;
+	border: none;
+	cursor: pointer;
+}
+#current{
+	cursor: default;
+	padding: 0 10px;
+}
